@@ -19,7 +19,7 @@ class rankingActions extends sfActions
   {
     $this->member_list = RankingPeer::getAccessRanking(10, 0);
     if ($this->member_list['number']) return sfView::SUCCESS;
-    return sfView::SUCCESS;
+    return sfView::ERROR;
   }
 
  /**
