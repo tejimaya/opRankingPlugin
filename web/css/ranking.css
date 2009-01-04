@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+/*----------------------------------------------
+ * パーツ枠
+ *--------------------------------------------*/
+div.ranking_parts {
+ border: solid 1px #CCCCCC;
+}
+
+/*----------------------------------------------
+ * テーブル
+ *--------------------------------------------*/
+div.ranking_parts table {
+  table-layout: fixed;
+  width: 100%;
+}
+div.ranking_parts th,
+div.ranking_parts td {
+  border-width: 1px 0 0 1px;
+  border-style: solid;
+  border-color: #CCCCCC;
+}
+div.ranking_parts tr th:first-child,
+div.ranking_parts tr td:first-child,
+div.ranking_parts tr th.first-child,
+div.ranking_parts tr td.first-child {
+  border-left-width: 0;
+}
+
+/*==============================================================================
+ * rankingResultList
+ *----------------------------------------------------------------------------*/
+.rankingResultList {
+  width: 460px;
+  float: right;
+}
+.rankingResultList .partsInfo {
+	background: #EEEEEE;
+}
+.rankingResultList .ditem {
+	margin: 8px 14px;
+}
+.rankingResultList td.photo {
+	width: 90px;
+	padding: 4px;
+	border-left: none;
+	text-align: center;
+}
+.rankingResultList th, .rankingResultList td {
+	padding: 5px;
+}
+.rankingResultList th {
+	width: 75px;
+}
+.rankingResultList td {
+  width: 75%;
+}
+#Body .rankingResultList th:first-child,
+#Body .rankingResultList th.first-child {
+	border-left-width: 1px;
+}
+.rankingResultList tr.operation th {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.rankingResultList tr.operation td {
+	padding: 0;
+}
+.rankingResultList tr.operation span.text {
+	float: left;
+	display: block;
+	width: 110px;
+	padding: 5px;
+	border-right: 1px solid #CCCCCC;
+}
+.rankingResultList tr.operation span.moreInfo{
+	zoom: 1;
+	display: block;
+	margin-left: 121px;
+	padding: 4px 0 3px;
+	text-align: center;
+}
+.rankingResultList div.operation {
+	text-align: center;
+}
+.rankingResultList tr.operation span.moreInfo img,
+.rankingResultList div.operation form,
+.rankingResultList div.operation fieldset {
+	display: inline;
+	vertical-align: top;
+}
+
+/*-----------------------------------------------------------------------------
+ * ranking link
+ *---------------------------------------------------------------------------*/
+.ranking_link {
+  width: 150px;
+  float: left;
+}
+.ranking_link div.caption {
+  background-color: #58B5F3;
+  text-align: center;
+  padding: 2px 2px 4px 4px;
+}
+.ranking_link div.exposition {
+  padding: 2px;
+}
+.ranking_link div.link {
+  border: solid 1px #58B5F3;
+  text-align: right;
+  padding: 2px;
+}
+/*----------------------------------------------------------------------------
+ * ranking
+ *--------------------------------------------------------------------------*/
+.ranking_ditem {
+  margin-left: 0;
+  padding-left: 0;
+}
