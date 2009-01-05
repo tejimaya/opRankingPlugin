@@ -41,34 +41,34 @@
       </trans-unit>
 
       <trans-unit id="11">
-      <source> :%saccess</source>
-      <target>さん :%sアクセス</target>
-      </trans-unit>
-
-      <trans-unit id="12">
       <source>The No1 of the number of access member</source>
       <target>アクセス数No1メンバー</target>
       </trans-unit>
-      <trans-unit id="13">
+      <trans-unit id="12">
       <source>all member is 0 access</source>
       <target>全てのメンバーは0アクセスです</target>
       </trans-unit>
 
-      <trans-unit id="14">
+      <trans-unit id="13">
       <source>No%s</source>
       <target>第%s位</target>
       </trans-unit>
-      <trans-unit id="15">
+      <trans-unit id="14">
       <source>Category</source>
       <target>カテゴリ</target>
       </trans-unit>
-      <trans-unit id="16">
+      <trans-unit id="15">
       <source>Manager</source>
       <target>管理者</target>
       </trans-unit>
-      <trans-unit id="17">
+      <trans-unit id="16">
       <source>Description</source>
       <target>紹介文</target>
+      </trans-unit>
+
+      <trans-unit id="17">
+      <source> :%saccess</source>
+      <target>さん :%sアクセス</target>
       </trans-unit>
 
       <trans-unit id="18">
@@ -77,19 +77,24 @@
       </trans-unit>
 
       <trans-unit id="19">
+      <source>:%smember</source>
+      <target>:%s人</target>
+      </trans-unit>
+
+      <trans-unit id="20">
       <source>The No1 of the number of MyFriend member</source>
       <target>マイフレンド数No1メンバー</target>
       </trans-unit>
-      <trans-unit id="20">
+      <trans-unit id="21">
       <source>There is no member who has a MyFriend</source>
       <target>マイフレンドがいるメンバーがいません</target>
       </trans-unit>
 
-      <trans-unit id="21">
+      <trans-unit id="22">
       <source>The No1 of the number of community member</source>
       <target>参加人数No1コミュニティ</target>
       </trans-unit>
-      <trans-unit id="22">
+      <trans-unit id="23">
       <source>No community</source>
       <target>コミュニティがありません</target>
       </trans-unit>

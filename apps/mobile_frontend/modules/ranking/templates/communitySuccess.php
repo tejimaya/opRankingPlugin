@@ -3,7 +3,7 @@ $list = array();
 for ($i = 0; $i < $ranking['number']; $i++)
 {
   $community = $ranking['model'][$i];
-  $list[$i][sprintf(__('No%s'), $ranking['rank'][$i])] = $community->getName() . sprintf(__(' :%smember'), $ranking['count'][$i]);
+  $list[$i][sprintf(__('No%s'), $ranking['rank'][$i])] = $community->getName() . ' ' . sprintf(__(':%smember'), $ranking['count'][$i]);
   $list[$i][__('category')] = "";
   $list[$i][__('manager')] = "";
   $list[$i][__('description')] = CommunityConfigPeer::retrieveByNameandCommunityId('description', $community->getId());
