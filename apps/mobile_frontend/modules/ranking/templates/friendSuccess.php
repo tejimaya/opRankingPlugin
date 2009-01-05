@@ -15,7 +15,5 @@ $options = array(
   'rank'           => $member_list['rank'],
 );
 
-slot('op_sidemenu');
 include_parts('rankingLink', 'RankingLink');
-end_slot();
 include_parts('rankingResultList', 'RankingResultList', $options);

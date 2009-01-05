@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+#LayoutB #Sidemenu div {
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  margin: 0;
+  width: auto;
+}
+
 /*----------------------------------------------
  * パーツ枠
  *--------------------------------------------*/
@@ -12,7 +19,6 @@ div.ranking_parts {
  *--------------------------------------------*/
 div.ranking_parts table {
   table-layout: fixed;
-  width: 100%;
 }
 div.ranking_parts th,
 div.ranking_parts td {
@@ -31,8 +37,6 @@ div.ranking_parts tr td.first-child {
  * rankingResultList
  *----------------------------------------------------------------------------*/
 .rankingResultList {
-  width: 460px;
-  float: right;
 }
 .rankingResultList .partsInfo {
 	background: #EEEEEE;
@@ -50,10 +54,10 @@ div.ranking_parts tr td.first-child {
 	padding: 5px;
 }
 .rankingResultList th {
-	width: 75px;
+  width: 75px;
 }
 .rankingResultList td {
-  width: 75%;
+  width: 400px;
 }
 #Body .rankingResultList th:first-child,
 #Body .rankingResultList th.first-child {
@@ -93,19 +97,19 @@ div.ranking_parts tr td.first-child {
 /*-----------------------------------------------------------------------------
  * ranking link
  *---------------------------------------------------------------------------*/
-.ranking_link {
+#LayoutB #Sidemenu div.ranking_link {
   width: 150px;
-  float: left;
 }
-.ranking_link div.caption {
+#LayoutB #Sidemenu div.ranking_link div.caption {
   background-color: #58B5F3;
   text-align: center;
   padding: 2px 2px 4px 4px;
+  font-weight: bold;
 }
-.ranking_link div.exposition {
+#LayoutB #Sidemenu div.ranking_link div.exposition {
   padding: 2px;
 }
-.ranking_link div.link {
+#LayoutB #Sidemenu div.ranking_link div.link {
   border: solid 1px #58B5F3;
   text-align: right;
   padding: 2px;
@@ -116,4 +120,7 @@ div.ranking_parts tr td.first-child {
 .ranking_ditem {
   margin-left: 0;
   padding-left: 0;
+}
+.rank_top td.photo {
+  width: 130px;
 }

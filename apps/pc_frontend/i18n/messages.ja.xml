@@ -6,57 +6,16 @@
       <source>The No1 of the number of access member is %s</source>
       <target>アクセス数No1メンバーは%sさんです</target>
       </trans-unit>
+
       <trans-unit id="2">
-      <source> :%saccess</source>
-      <target>さん :%sアクセス</target>
-      </trans-unit>
-
-      <trans-unit id="3">
-      <source>The No1 of the number of access member</source>
-      <target>アクセス数No1メンバー</target>
-      </trans-unit>
-      <trans-unit id="4">
-      <source>all member is 0 access</source>
-      <target>全てのメンバーは0アクセスです</target>
-      </trans-unit>
-
-      <trans-unit id="5">
       <source>The No1 of the number of Friends member is %s</source>
       <target>マイフレンド数No1メンバーは%sさんです</target>
       </trans-unit>
-      <trans-unit id="6">
-      <source>No%s</source>
-      <target>第%s位</target>
-      </trans-unit>
-      <trans-unit id="7">
-      <source> :%smember</source>
-      <target>さん :%s人</target>
-      </trans-unit>
 
-      <trans-unit id="8">
-      <source>The No1 of the number of Friends member</source>
-      <target>マイフレンド数No1メンバー</target>
-      </trans-unit>
-      <trans-unit id="9">
-      <source>The Friends member</source>
-      <target>マイフレンドがいるメンバーがいません</target>
-      </trans-unit>
-
-      <trans-unit id="10">
+      <trans-unit id="3">
       <source>The No1 of the number of community member is %s</source>
-      <target>参加人数No1コミュニティは%sさんです</target>
+      <target>参加人数No1コミュニティは『%s』です</target>
       </trans-unit>
-
-      <trans-unit id="11">
-      <source>The No1 of the number of community member</source>
-      <target>参加人数No1コミュニティ</target>
-      </trans-unit>
-
-      <trans-unit id="12">
-      <source>No community</source>
-      <target>コミュニティがありません</target>
-      </trans-unit>
-
 
     </body>
   </file>

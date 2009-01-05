@@ -1,7 +1,7 @@
 <?php foreach ($option['model'] as $key => $model): ?>
 
 <?php if (!$key || ($key > 0 && $option['rank'][$key] != $option['rank'][$key - 1])): ?>
-<div class="dparts rankingResultList"><div class="ranking_parts">
+<div class="dparts rankingResultList <?php ($option['rank'][$key] == 1) ? print('rank_top') : print('') ?>"><div class="ranking_parts">
 <?php if ($option['rank'][$key] == 1): ?>
 <div class="partsHeading">
 <h3><?php echo $option['title'] ?></h3>

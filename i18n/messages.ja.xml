@@ -7,6 +7,93 @@
       <target>詳細を見る</target>
       </trans-unit>
 
+      <trans-unit id="2">
+      <source>Number No1 of accesses</source>
+      <target>アクセス数No1</target>
+      </trans-unit>
+      <trans-unit id="3">
+      <source>It is a ranking of the member with a lot of numbers of yesterday of accesses.</source>
+      <target>昨日のアクセスが多かったメンバーのランキングです。</target>
+      </trans-unit>
+      <trans-unit id="4">
+      <source>Number No1 of my friends</source>
+      <target>マイフレンド数No1</target>
+      </trans-unit>
+      <trans-unit id="6">
+      <source>It is a ranking of the member with a lot of numbers of registered friends.</source>
+      <target>登録されているマイフレンドの数が多いメンバーのランキングです。</target>
+      </trans-unit>
+      <trans-unit id="7">
+      <source>Participation number No1 community</source>
+      <target>参加人数No1コミュニティ</target>
+      </trans-unit>
+      <trans-unit id="8">
+      <source>It is a ranking of a lot of communities of the participant that are.</source>
+      <target>参加者の多いコミュニティのランキングです。</target>
+      </trans-unit>
+      <trans-unit id="9">
+      <source>No1 community at each upsurge</source>
+      <target>盛り上がり度No1コミュニティ</target>
+      </trans-unit>
+      <trans-unit id="10">
+      <source>It is a ranking of the community with a lot of numbers of yesterday of bulletin board writing.</source>
+      <target>昨日の掲示板書き込み数が多かったコミュニティのランキングです。</target>
+      </trans-unit>
+
+      <trans-unit id="11">
+      <source> :%saccess</source>
+      <target>さん :%sアクセス</target>
+      </trans-unit>
+
+      <trans-unit id="12">
+      <source>The No1 of the number of access member</source>
+      <target>アクセス数No1メンバー</target>
+      </trans-unit>
+      <trans-unit id="13">
+      <source>all member is 0 access</source>
+      <target>全てのメンバーは0アクセスです</target>
+      </trans-unit>
+
+      <trans-unit id="14">
+      <source>No%s</source>
+      <target>第%s位</target>
+      </trans-unit>
+      <trans-unit id="15">
+      <source>Category</source>
+      <target>カテゴリ</target>
+      </trans-unit>
+      <trans-unit id="16">
+      <source>Manager</source>
+      <target>管理者</target>
+      </trans-unit>
+      <trans-unit id="17">
+      <source>Description</source>
+      <target>紹介文</target>
+      </trans-unit>
+
+      <trans-unit id="18">
+      <source> :%smember</source>
+      <target>さん :%s人</target>
+      </trans-unit>
+
+      <trans-unit id="19">
+      <source>The No1 of the number of MyFriend member</source>
+      <target>マイフレンド数No1メンバー</target>
+      </trans-unit>
+      <trans-unit id="20">
+      <source>There is no member who has a MyFriend</source>
+      <target>マイフレンドがいるメンバーがいません</target>
+      </trans-unit>
+
+      <trans-unit id="21">
+      <source>The No1 of the number of community member</source>
+      <target>参加人数No1コミュニティ</target>
+      </trans-unit>
+      <trans-unit id="22">
+      <source>No community</source>
+      <target>コミュニティがありません</target>
+      </trans-unit>
+
     </body>
   </file>
 </xliff>

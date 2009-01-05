@@ -91,12 +91,15 @@ class RankingPeer
     $list['rank'] = array();
     $list['count'] = array();
     $list['model'] = array();
+    $list['admin'] = array();
     for ($i = 0, $rank = 1, $cnt = -1; $row = $stmt->fetch(PDO::FETCH_NUM); $i++)
     {
       if ($i && ($cnt != $row[0])) { $rank++; }
       $list['count'][$i] = $cnt = $row[0];
       $list['model'][$i] = CommunityPeer::retrieveByPK($row[1]);
       $list['rank'][$i] = $rank;
+      $list['admin'][$i] = CommunityMemberPeer::getCommunityAdmin($row[1]);
+      $list['admin'][$i] = MemberPeer::retrieveByPk($list['admin'][$i]->getMemberId());
     }
     $list['number'] = $i;
     return $list;
