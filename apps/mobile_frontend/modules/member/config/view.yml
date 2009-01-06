@@ -1,7 +1,7 @@
-profileSuccess:
+homeSuccess:
   customize:
-    linkParts:
-      template: [member, linkParts]
-      parts: [friendList]
-      target: [before] 
+    rankingLink:
+      template: [member, rankingLink]
+      parts: [inviteLink]
+      target: [after] 
 

@@ -97,6 +97,11 @@
       <target>書き込まれていません</target>
       </trans-unit>
 
+      <trans-unit id="22">
+      <source>Ranking</source>
+      <target>ランキング</target>
+      </trans-unit>
+
     </body>
   </file>
 </xliff>

@@ -1,7 +1,10 @@
 <?php
-include_page_title(__('ranking'));
+include_page_title(__('Ranking'));
 
-echo __('It is a ranking of the member with a lot of numbers of registered friends.');
+echo '<div class="rankingHeading">' . __('Member of number No1 of friends') . '</div>'
+   . '<div class="rankingDescription">'
+   . __('It is a ranking of the member with a lot of numbers of registered friends.')
+   . '</div>';
 
 $list = array();
 for ($i = 0; $i < $member_list['number']; $i++)

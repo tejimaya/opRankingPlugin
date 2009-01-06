@@ -1,0 +1,13 @@
+.rankingHeading {
+  text-align: center;
+  background-color: #555555;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 2px;
+  color: #FFFFFF;
+}
+
+.rankingDescription {
+  text-align: center;
+  padding: 4px;
+}

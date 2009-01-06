@@ -1,7 +1,10 @@
 <?php
-include_page_title(__('ranking'));
+include_page_title(__('Ranking'));
 
-echo __('It is a ranking of the member with a lot of numbers of yesterday of accesses.');
+echo '<div class="rankingHeading">' . __('Access number No1 member') . '</div>'
+   . '<div class="rankingDescription">'
+   . __('It is a ranking of the member with a lot of numbers of yesterday of accesses.')
+   . '</div>';
 
 $list = array();
 for ($i = 0; $i < $member_list['number']; $i++)
