@@ -10,7 +10,7 @@ for ($i = 0; $i < $ranking['number']; $i++)
 }
 
 $options = array(
-  'title'          => sprintf(__('The No1 of the number of community member is %s'), $ranking['model'][0]->getName()),
+  'title'          => sprintf(__("The No1 of the number of community member is '%s'"), $ranking['model'][0]->getName()),
   'link_to_detail' => 'community/%d',
   'model'          => $ranking['model'],
   'list'           => $list,

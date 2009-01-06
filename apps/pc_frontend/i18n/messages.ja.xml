@@ -13,10 +13,14 @@
       </trans-unit>
 
       <trans-unit id="3">
-      <source>The No1 of the number of community member is %s</source>
+      <source>The No1 of the number of community member is '%s'</source>
       <target>参加人数No1コミュニティは『%s』です</target>
       </trans-unit>
 
+      <trans-unit id="4">
+      <source>No1 community is '%s' at each upsurge</source>
+      <target>盛り上がり度:No1コミュニティは『%s』です</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

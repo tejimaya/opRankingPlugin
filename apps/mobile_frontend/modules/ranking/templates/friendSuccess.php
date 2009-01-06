@@ -1,19 +1,19 @@
 <?php
+include_page_title(__('ranking'));
+
+echo __('It is a ranking of the member with a lot of numbers of registered friends.');
+
 $list = array();
 for ($i = 0; $i < $member_list['number']; $i++)
 {
   $member = $member_list['model'][$i];
-  $list[$i][sprintf(__('No%s'), $member_list['rank'][$i])] = $member->getName() . sprintf(__(' :%smember'), $member_list['count'][$i]);
-  $list[$i][$member->getProfile('self_intro')->getCaption()] = $member->getProfile('self_intro');
+  $list[] = sprintf(__('No%s'), $member_list['rank'][$i]) . '<br />'
+          . link_to($member->getName(), 'member/profile?id=' . $member->getId()) . sprintf(__(' :%smember'), $member_list['count'][$i]);
 }
 
 $options = array(
-  'title'          => sprintf(__('The No1 of the number of Friends member is %s'), $member_list['model'][0]->getName()),
-  'link_to_detail' => 'member/profile?id=%d',
-  'model'          => $member_list['model'],
-  'list'           => $list,
-  'rank'           => $member_list['rank'],
+  'border' => true,
 );
 
+include_list_box('rankingList', $list, $options);
 include_parts('rankingLink', 'RankingLink');
-include_parts('rankingResultList', 'RankingResultList', $options);
