@@ -2,6 +2,6 @@ homeSuccess:
   customize:
     rankingLink:
       template: [member, rankingLink]
-      parts: [inviteLink]
+      parts: [invite]
       target: [after] 
 
