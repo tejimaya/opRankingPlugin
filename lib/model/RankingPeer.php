@@ -19,7 +19,7 @@ class RankingPeer
   {
     $cnt_member_id_to = 'COUNT(' . AshiatoPeer::MEMBER_ID_TO . ')';
     $c = new Criteria();
-    $c->add(AshiatoPeer::UPDATED_AT, date('Y-m-d', self::getDay(-1)), Criteria::LIKE);
+    $c->add(AshiatoPeer::UPDATED_AT, date('Y-m-d%', self::getDay(-1)), Criteria::LIKE);
     $c->addSelectColumn($cnt_member_id_to);
     $c->addSelectColumn(AshiatoPeer::MEMBER_ID_TO);
     $c->addGroupByColumn(AshiatoPeer::MEMBER_ID_TO);
@@ -123,7 +123,7 @@ class RankingPeer
   {
     $cnt_add = 'COUNT(' . CommunityTopicPeer::COMMUNITY_ID . ')';
     $c = new Criteria();
-    $c->add(CommunityTopicCommentPeer::UPDATED_AT, date('Y-m-d', self::getDay(-1)), Criteria::LIKE);
+    $c->add(CommunityTopicCommentPeer::UPDATED_AT, date('Y-m-d%', self::getDay(-1)), Criteria::LIKE);
     $c->addJoin(CommunityTopicCommentPeer::COMMUNITY_TOPIC_ID, CommunityTopicPeer::ID);
     $c->addSelectColumn($cnt_add);
     $c->addSelectColumn(CommunityTopicPeer::COMMUNITY_ID);
