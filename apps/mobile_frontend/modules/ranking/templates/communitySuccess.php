@@ -1,10 +1,8 @@
 <?php
-$include_page_title(__('Ranking'));
 
-echo '<div class="rankingHeading">' . __('Participation number No1 community') . '</div>'
-   . '<div class="rankingDescription">'
-   . __('It is a ranking of a lot of communities of the participant that are.')
-   . '</div>';
+$include_page_title(__('Ranking'), __('Participation number No1 community'));
+
+echo '<center>' . __('It is a ranking of a lot of communities of the participant that are.') . '</center>';
 
 list = array();
 for ($i = 0; $i < $ranking['number']; $i++)
