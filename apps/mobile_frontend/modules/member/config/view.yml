@@ -1,7 +1,0 @@
-homeSuccess:
-  customize:
-    rankingLink:
-      template: [member, rankingLink]
-      parts: [invite]
-      target: [after] 
-
