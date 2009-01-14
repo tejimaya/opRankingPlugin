@@ -2,6 +2,7 @@ Navi:
   secure_global_navi_ranking:
     type: "secure_global"
     uri: "ranking/access"
+    sort_order: 23
 
 NaviI18n:
   secure_global_navi_ranking_i18n:
