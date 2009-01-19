@@ -97,19 +97,20 @@ div.ranking_parts tr td.first-child {
 /*-----------------------------------------------------------------------------
  * ranking link
  *---------------------------------------------------------------------------*/
-#LayoutB #Sidemenu div.ranking_link {
+#LayoutB #Left div.ranking_link {
   width: 150px;
+  border: 8px solid #CCCCCC;
 }
-#LayoutB #Sidemenu div.ranking_link div.caption {
+#LayoutB #Left div.ranking_link div.caption {
   background-color: #58B5F3;
   text-align: center;
   padding: 2px 2px 4px 4px;
   font-weight: bold;
 }
-#LayoutB #Sidemenu div.ranking_link div.exposition {
+#LayoutB #Left div.ranking_link div.exposition {
   padding: 2px;
 }
-#LayoutB #Sidemenu div.ranking_link div.link {
+#LayoutB #Left div.ranking_link div.link {
   border: solid 1px #58B5F3;
   text-align: right;
   padding: 2px;
