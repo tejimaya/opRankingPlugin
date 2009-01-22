@@ -1,6 +1,6 @@
 <?php
 
-include_page_title(__('Ranking'), __('Member of number No1 of friends'));
+op_mobile_page_title(__('Ranking'), __('Member of number No1 of friends'));
 
 echo '<center>' . __('It is a ranking of the member with a lot of numbers of registered friends.') . '</center>';
 
@@ -16,5 +16,5 @@ $options = array(
   'border' => true,
 );
 
-include_list_box('rankingList', $list, $options);
-include_parts('rankingLink', 'RankingLink');
+op_iunclude_list('rankingList', $list, $options);
+op_include_parts('rankingLink', 'RankingLink');

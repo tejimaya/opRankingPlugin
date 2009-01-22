@@ -1,9 +1,9 @@
 <?php
-$include_page_title(__('Ranking'), __('No1 community at each upsurge'));
+op_mobile_page_title(__('Ranking'), __('No1 community at each upsurge'));
 
 echo '<center>' . __('It is a ranking of the community with a lot of numbers of yesterday of bulletin board writing.') . '</center>';
 
-list = array();
+$list = array();
 for ($i = 0; $i < $ranking['number']; $i++)
 {
   $community = $ranking['model'][$i];
@@ -15,5 +15,5 @@ $options = array(
   'border' => true,
 );
 
-include_list_box('rankingList', $list, $options);
-include_parts('rankingLink', 'RankingLink');
+op_include_list('rankingList', $list, $options);
+op_include_parts('rankingLink', 'RankingLink');

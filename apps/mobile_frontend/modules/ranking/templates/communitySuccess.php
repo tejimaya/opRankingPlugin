@@ -1,10 +1,10 @@
 <?php
 
-$include_page_title(__('Ranking'), __('Participation number No1 community'));
+op_mobile_page_title(__('Ranking'), __('Participation number No1 community'));
 
 echo '<center>' . __('It is a ranking of a lot of communities of the participant that are.') . '</center>';
 
-list = array();
+$list = array();
 for ($i = 0; $i < $ranking['number']; $i++)
 {
   $community = $ranking['model'][$i];
@@ -16,5 +16,5 @@ $options = array(
   'border' => true,
 );
 
-include_list_box('rankingList', $list, $options);
-include_parts('rankingLink', 'RankingLink');
+op_include_list('rankingList', $list, $options);
+op_include_parts('rankingLink', 'RankingLink');
