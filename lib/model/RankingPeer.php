@@ -54,6 +54,8 @@ class RankingPeer
     $cnt_member_id_to = 'COUNT(' . MemberRelationshipPeer::MEMBER_ID_TO . ')';
     $c = new Criteria();
     $c->add(MemberRelationshipPeer::IS_FRIEND, true);
+    $c->addJoin(MemberRelationshipPeer::MEMBER_ID_TO, MemberPeer::ID);
+    $c->add(MemberPeer::IS_ACTIVE, true);
     $c->addSelectColumn($cnt_member_id_to);
     $c->addSelectColumn(MemberRelationshipPeer::MEMBER_ID_TO);
     $c->addGroupByColumn(MemberRelationshipPeer::MEMBER_ID_TO);
