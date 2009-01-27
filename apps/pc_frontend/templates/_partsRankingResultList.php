@@ -1,3 +1,4 @@
+<?php $list = $options->getRaw('list') ?>
 <?php foreach ($options['model'] as $key => $model): ?>
 
 <?php if (!$key || ($key > 0 && $options['rank'][$key] != $options['rank'][$key - 1])): ?>
@@ -15,12 +16,12 @@
 <?php endif; ?>
 
 <tr>
-<td rowspan="<?php echo count($options['list'][$key]) + 1 ?>" class="photo">
+<td rowspan="<?php echo count($list[$key]) + 1 ?>" class="photo">
 <?php echo link_to(image_tag_sf_image($model->getImageFilename(), array('size' => '76x76')), sprintf($options['link_to_detail'], $model->getId())); ?>
 </td>
 </tr>
 
-<?php foreach ($options['list'][$key] as $caption => $item) : ?>
+<?php foreach ($list[$key] as $caption => $item) : ?>
 <tr>
 <th><?php echo $caption ?></th>
 <td><?php echo $item ?></td>

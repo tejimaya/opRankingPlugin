@@ -4,7 +4,10 @@ for ($i = 0; $i < $member_list['number']; $i++)
 {
   $member = $member_list['model'][$i];
   $list[$i][sprintf(__('No%s'), $member_list['rank'][$i])] = $member->getName() . sprintf(__(' :%smember'), $member_list['count'][$i]);
-  $list[$i][$member->getProfile('self_intro')->getCaption()] = nl2br($member->getProfile('self_intro'));
+  if ($member->getProfile('self_intro'))
+  {
+    $list[$i][$member->getProfile('self_intro')->getCaption()] = nl2br($member->getProfile('self_intro'));
+  }
 }
 
 $options = array(
