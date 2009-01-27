@@ -9,7 +9,7 @@ for ($i = 0; $i < $ranking['number']; $i++)
 {
   $community = $ranking['model'][$i];
   $list[] = sprintf(__('No%s'), $ranking['rank'][$i]) . '<br />'
-          . link_to($community->getName(), 'community/' . $community->getId()) . ' ' . sprintf(__(':%smember'), $ranking['count'][$i]);
+          . link_to($community->getName(), 'community/home/id/' . $community->getId()) . ' ' . sprintf(__(':%smember'), $ranking['count'][$i]);
 }
 
 $options = array(
