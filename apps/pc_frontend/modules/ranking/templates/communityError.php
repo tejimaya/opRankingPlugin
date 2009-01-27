@@ -6,4 +6,4 @@ include_box('community_list', __('Participation number No1 community'), __('No c
 ?>
 
 <?php use_helper('Javascript') ?>
-<p><?php echo link_to_function(__('前のページに戻る'), 'history.back()') ?></p>
+<?php op_include_line('backLink', link_to_function(__('Back to previous page'), 'history.back()')) ?>
