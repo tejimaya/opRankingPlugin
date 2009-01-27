@@ -16,5 +16,5 @@ $options = array(
   'border' => true,
 );
 
-op_iunclude_list('rankingList', $list, $options);
+op_include_list('rankingList', $list, $options);
 op_include_parts('rankingLink', 'RankingLink');
