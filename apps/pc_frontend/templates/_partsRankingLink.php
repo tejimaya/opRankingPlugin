@@ -1,25 +1,27 @@
-<div class="dparts ranking_link">
-<div class="parts">
+<div class="parts rankingSideNav">
 
-<div class="caption"><?php echo __('Access number No1 member') ?></div>
-<div class="exposition"><?php echo __('It is a ranking of the member with a lot of numbers of yesterday of accesses.') ?>
-<div class="link"><?php echo link_to(__('Access number No1 member'), 'ranking/access') ?></div>
+<div class="item">
+<div class="partsHeading"><h3><?php echo __('Access number No1 member') ?></h3></div>
+<p><?php echo __('It is a ranking of the member with a lot of numbers of yesterday of accesses.') ?></p>
+<p class="link"><?php echo link_to(__('Access number No1 member'), 'ranking/access') ?></p>
 </div>
 
-<div class="caption"><?php echo __('Member of number No1 of friends') ?></div>
-<div class="exposition"><?php echo __('It is a ranking of the member with a lot of numbers of registered friends.') ?>
-<div class="link"><?php echo link_to(__('Member of number No1 of friends'), 'ranking/friend') ?></div>
+<div class="item">
+<div class="partsHeading"><h3><?php echo __('Member of number No1 of friends') ?></h3></div>
+<p><?php echo __('It is a ranking of the member with a lot of numbers of registered friends.') ?></p>
+<p class="link"><?php echo link_to(__('Member of number No1 of friends'), 'ranking/friend') ?></p>
 </div>
 
-<div class="caption"><?php echo __('Participation number No1 community') ?></div>
-<div class="exposition"><?php echo __('It is a ranking of a lot of communities of the participant that are.') ?>
-<div class="link"><?php echo link_to(__('Participation number No1 community'), 'ranking/community') ?></div>
+<div class="item">
+<div class="partsHeading"><h3><?php echo __('Participation number No1 community') ?></h3></div>
+<p><?php echo __('It is a ranking of a lot of communities of the participant that are.') ?></p>
+<p class="link"><?php echo link_to(__('Participation number No1 community'), 'ranking/community') ?></p>
 </div>
 
-<div class="caption"><?php echo __('No1 community at each upsurge') ?></div>
-<div class="exposition"><?php echo __('It is a ranking of the community with a lot of numbers of yesterday of bulletin board writing.') ?>
-<div class="link"><?php echo link_to(__('No1 community at each upsurge'), 'ranking/topic') ?></div>
+<div class="item">
+<div class="partsHeading"><h3><?php echo __('No1 community at each upsurge') ?></h3></div>
+<p><?php echo __('It is a ranking of the community with a lot of numbers of yesterday of bulletin board writing.') ?></p>
+<p class="link"><?php echo link_to(__('No1 community at each upsurge'), 'ranking/topic') ?></p>
 </div>
 
-</div>
 </div>
