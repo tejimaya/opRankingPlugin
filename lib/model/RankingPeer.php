@@ -2,11 +2,14 @@
 
 class RankingPeer
 {
-
-  public static function getDay($day)
+  protected static function getDateCriteria(Criteria $criteria, $colname, $day = -1)
   {
-    $now = time();
-    return mktime(date("H", $now),date("i", $now),date("s", $now),date("m", $now),date("d", $now) + $day, date("Y", $now));
+    $nowTime = time();
+    $fromTime = mktime(0, 0, 0, date("m", $nowTime), date("d", $nowTime) + $day, date("Y", $nowTime));
+    $toTime = mktime(0, 0, -1, date("m", $nowTime), date("d", $nowTime) + $day + 1, date("Y", $nowTime));
+    $criterion = $criteria->getNewCriterion($colname, $fromTime, Criteria::GREATER_EQUAL);
+    $criterion->addAnd($criteria->getNewCriterion($colname, $toTime, Criteria::LESS_EQUAL));
+    $criteria->add($criterion);
   }
 
   /**
@@ -17,9 +20,14 @@ class RankingPeer
   */
   public static function getAccessRanking($max, $page)
   {
-    $cnt_member_id_to = 'COUNT(' . AshiatoPeer::MEMBER_ID_TO . ')';
+    if (!class_exists('AshiatoPeer'))
+    {
+      throw new LogicException("opAshiatoPlugin hasn't installed");
+    }
+
+    $cnt_member_id_to = 'COUNT(*)';
     $c = new Criteria();
-    $c->add(AshiatoPeer::UPDATED_AT, date('Y-m-d%', self::getDay(-1)), Criteria::LIKE);
+    self::getDateCriteria($c, AshiatoPeer::UPDATED_AT);
     $c->addSelectColumn($cnt_member_id_to);
     $c->addSelectColumn(AshiatoPeer::MEMBER_ID_TO);
     $c->addGroupByColumn(AshiatoPeer::MEMBER_ID_TO);
@@ -51,7 +59,7 @@ class RankingPeer
   */
   public static function getFriendRanking($max, $page)
   {
-    $cnt_member_id_to = 'COUNT(' . MemberRelationshipPeer::MEMBER_ID_TO . ')';
+    $cnt_member_id_to = 'COUNT(*)';
     $c = new Criteria();
     $c->add(MemberRelationshipPeer::IS_FRIEND, true);
     $c->addJoin(MemberRelationshipPeer::MEMBER_ID_TO, MemberPeer::ID);
@@ -87,7 +95,7 @@ class RankingPeer
   */
   public static function getCommunityRanking($max, $page)
   {
-    $cnt_add = 'COUNT(' . CommunityMemberPeer::COMMUNITY_ID . ')';
+    $cnt_add = 'COUNT(*)';
     $c = new Criteria();
     $c->addSelectColumn($cnt_add);
     $c->addSelectColumn(CommunityMemberPeer::COMMUNITY_ID);
@@ -123,9 +131,14 @@ class RankingPeer
   */
   public static function getTopicRanking($max, $page)
   {
-    $cnt_add = 'COUNT(' . CommunityTopicPeer::COMMUNITY_ID . ')';
+    if (!class_exists('CommunityTopicCommentPeer'))
+    {
+      throw new LogicException("opCommunityTopicPlugin hasn't installed");
+    }
+
+    $cnt_add = 'COUNT(*)';
     $c = new Criteria();
-    $c->add(CommunityTopicCommentPeer::UPDATED_AT, date('Y-m-d%', self::getDay(-1)), Criteria::LIKE);
+    self::getDateCriteria($c, CommunityTopicCommentPeer::CREATED_AT);
     $c->addJoin(CommunityTopicCommentPeer::COMMUNITY_TOPIC_ID, CommunityTopicPeer::ID);
     $c->addSelectColumn($cnt_add);
     $c->addSelectColumn(CommunityTopicPeer::COMMUNITY_ID);

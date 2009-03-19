@@ -17,6 +17,7 @@ class opRankingPluginRankingActions extends sfActions
   */
   public function executeAccess($request)
   {
+    $this->forward404Unless(class_exists('AshiatoPeer'));
     $this->member_list = RankingPeer::getAccessRanking(10, 0);
     if ($this->member_list['number']) return sfView::SUCCESS;
     return sfView::ERROR;
@@ -53,6 +54,7 @@ class opRankingPluginRankingActions extends sfActions
   */
   public function executeTopic($request)
   {
+    $this->forward404Unless(class_exists('CommunityTopicCommentPeer'));
     $this->ranking = RankingPeer::getTopicRanking(10, 0);
     if ($this->ranking['number']) return sfView::SUCCESS;
     return sfView::ERROR;
