@@ -17,8 +17,8 @@ class opRankingPluginRankingActions extends sfActions
   */
   public function executeAccess($request)
   {
-    $this->forward404Unless(class_exists('AshiatoPeer'));
-    $this->member_list = RankingPeer::getAccessRanking(10, 0);
+    $this->forward404Unless(class_exists('Ashiato'));
+    $this->member_list = opRankingPlugin::getAccessRanking(10, 0);
     if ($this->member_list['number']) return sfView::SUCCESS;
     return sfView::ERROR;
   }
@@ -30,7 +30,7 @@ class opRankingPluginRankingActions extends sfActions
   */
   public function executeFriend($request)
   {
-    $this->member_list = RankingPeer::getFriendRanking(10, 0);
+    $this->member_list = opRankingPlugin::getFriendRanking(10, 0);
     if ($this->member_list['number']) return sfView::SUCCESS;
     return sfView::ERROR;
   }
@@ -42,7 +42,7 @@ class opRankingPluginRankingActions extends sfActions
   */
   public function executeCommunity($request)
   {
-    $this->ranking = RankingPeer::getCommunityRanking(10, 0);
+    $this->ranking = opRankingPlugin::getCommunityRanking(10, 0);
     if ($this->ranking['number']) return sfView::SUCCESS;
     return sfView::ERROR;
   }
@@ -54,8 +54,8 @@ class opRankingPluginRankingActions extends sfActions
   */
   public function executeTopic($request)
   {
-    $this->forward404Unless(class_exists('CommunityTopicCommentPeer'));
-    $this->ranking = RankingPeer::getTopicRanking(10, 0);
+    $this->forward404Unless(class_exists('CommunityTopicComment'));
+    $this->ranking = opRankingPlugin::getTopicRanking(10, 0);
     if ($this->ranking['number']) return sfView::SUCCESS;
     return sfView::ERROR;
   }
