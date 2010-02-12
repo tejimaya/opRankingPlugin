@@ -15,7 +15,7 @@ class opRankingPlugin
       throw new LogicException("opAshiatoPlugin hasn't installed");
     }
 
-    $Ashiatos = Doctrine::getTable('Ashiato')->createQuery()
+    $ashiatos = Doctrine::getTable('Ashiato')->createQuery()
       ->select('COUNT(*), member_id_to')
       ->where('created_at >= ?', date('Y-m-d', time() - 86400))
       ->addWhere('created_at < ?', date('Y-m-d'))
