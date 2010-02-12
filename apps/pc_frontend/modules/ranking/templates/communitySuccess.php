@@ -3,10 +3,10 @@ $list = array();
 for ($i = 0; $i < $ranking['number']; $i++)
 {
   $community = $ranking['model'][$i];
-  $list[$i][sprintf(__('No%s'), $ranking['rank'][$i])] = $community->getName() . ' ' . sprintf(__(':%smember'), $ranking['count'][$i]);
-  $list[$i][__('Category')] = "none";
+  $list[$i][sprintf(__('No%s'), $ranking['rank'][$i])] = $community->getName().' '.sprintf(__(':%smember'), $ranking['count'][$i]);
+  $list[$i][__('Category')] = $community->getCommunityCategory();
   $list[$i][__('Manager')] = $ranking['admin'][$i]->getName();
-  $list[$i][__('Description')] = nl2br($community->getConfig('description'));
+  $list[$i][__('Description')] = op_truncate($community->getConfig('description'), 36, '', 3);
 }
 
 $options = array(
