@@ -1,0 +1,3 @@
+opRanking:
+  class: opRankingPluginFrontendRouteCollection
+  options: { name: opRanking }
