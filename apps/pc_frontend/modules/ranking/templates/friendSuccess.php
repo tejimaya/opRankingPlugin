@@ -3,10 +3,11 @@ $list = array();
 for ($i = 0; $i < $member_list['number']; $i++)
 {
   $member = $member_list['model'][$i];
-  $list[$i][sprintf(__('No%s'), $member_list['rank'][$i])] = $member->getName() . sprintf(__(' :%smember'), $member_list['count'][$i]);
-  if ($member->getProfile('self_intro'))
+  $list[$i][sprintf(__('No%s'), $member_list['rank'][$i])] = $member->getName().sprintf(__(' :%smember'), $member_list['count'][$i]);
+  $selfintoroCaption = __('Self Introduction');
+  if ($member->getProfile('op_preset_self_introduction'))
   {
-    $list[$i][$member->getProfile('self_intro')->getCaption()] = nl2br($member->getProfile('self_intro'));
+    $list[$i][$selfintoroCaption] = op_truncate($member->getProfile('op_preset_self_introduction'), 36, '', 3);
   }
 }
 
