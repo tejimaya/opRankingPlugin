@@ -3,8 +3,8 @@ $list = array();
 for ($i = 0; $i < $member_list['number']; $i++)
 {
   $member = $member_list['model'][$i];
-  $list[$i][sprintf(__('No%s'), $member_list['rank'][$i])] =
-    link_to($member->getName(), 'member/profile?id=' . $member->getId()) . sprintf(__(' :%saccess'), $member_list['count'][$i]);
+  $list[$i][__('No%0%', array('%0%' => $member_list['rank'][$i]))] =
+    __('%0% :%1% access', array('%0%' => link_to($member->getName(), 'member/profile?id='.$member->getId()), '%1%' => $member_list['count'][$i]));
   $selfintoroCaption = __('Self Introduction');
   if ($member->getProfile('op_preset_self_introduction'))
   {
@@ -13,7 +13,7 @@ for ($i = 0; $i < $member_list['number']; $i++)
 }
 
 $options = array(
-  'title'          => sprintf(__('The No1 of the number of access member is %s'), $member_list['model'][0]->getName()),
+  'title'          => __('The No1 of the number of access member is %0%', array('%0%' => $member_list['model'][0]->getName())),
   'link_to_detail' => 'member/profile?id=%d',
   'model'          => $member_list['model'],
   'list'           => $list,

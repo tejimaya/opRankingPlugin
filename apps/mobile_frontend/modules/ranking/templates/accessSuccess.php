@@ -8,8 +8,8 @@ $list = array();
 for ($i = 0; $i < $member_list['number']; $i++)
 {
   $member = $member_list['model'][$i];
-  $list[] = sprintf(__('No%s'), $member_list['rank'][$i]) . '<br />'
-          . link_to($member->getName(), 'member/profile?id=' . $member->getId()) . sprintf(__(' :%saccess'), $member_list['count'][$i]);
+  $list[] = __('No%0%', array('%0%' => $member_list['rank'][$i])).'<br>'
+          . __('%0% :%1% access', array('%0%' => link_to($member->getName(), 'member/profile?id='.$member->getId()), '%1%' => $member_list['count'][$i]));
 }
 
 $options = array(

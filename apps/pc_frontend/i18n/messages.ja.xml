@@ -3,123 +3,115 @@
   <file orginal="global" source-language="en" datatype="plaintext">
     <body>
       <trans-unit id="1">
-      <source>Show detail</source>
-      <target>詳細を見る</target>
+        <source>Show detail</source>
+        <target>詳細を見る</target>
       </trans-unit>
 
       <trans-unit id="2">
-      <source>Access number No1 member</source>
-      <target>アクセス数No1</target>
+        <source>Access number No1 member</source>
+        <target>アクセス数No1</target>
       </trans-unit>
       <trans-unit id="3">
-      <source>It is a ranking of the member with a lot of numbers of yesterday of accesses.</source>
-      <target>昨日のアクセスが多かったメンバーのランキングです。</target>
+        <source>It is a ranking of the member with a lot of numbers of yesterday of accesses.</source>
+        <target>昨日のアクセスが多かったメンバーのランキングです。</target>
       </trans-unit>
       <trans-unit id="4">
-      <source>Member of number No1 of friends</source>
-      <target>マイフレンド数No1</target>
+        <source>Member of number No1 of %friend%</source>
+        <target>%friend%数No1</target>
       </trans-unit>
       <trans-unit id="6">
-      <source>It is a ranking of the member with a lot of numbers of registered friends.</source>
-      <target>登録されているマイフレンドの数が多いメンバーのランキングです。</target>
+        <source>It is a ranking of the member with a lot of numbers of registered %friend%.</source>
+        <target>登録されている%friend%の数が多いメンバーのランキングです。</target>
       </trans-unit>
       <trans-unit id="7">
-      <source>Participation number No1 community</source>
-      <target>参加人数No1コミュニティ</target>
+        <source>Participation number No1 %community%</source>
+        <target>参加人数No1%community%</target>
       </trans-unit>
       <trans-unit id="8">
-      <source>It is a ranking of a lot of communities of the participant that are.</source>
-      <target>参加者の多いコミュニティのランキングです。</target>
+        <source>It is a ranking of a lot of %community% of the participant that are.</source>
+        <target>参加者の多い%community%のランキングです。</target>
       </trans-unit>
       <trans-unit id="9">
-      <source>No1 community at each upsurge</source>
-      <target>盛り上がり度No1コミュニティ</target>
+        <source>No1 %community% at each upsurge</source>
+        <target>盛り上がり度No1%community%</target>
       </trans-unit>
       <trans-unit id="10">
-      <source>It is a ranking of the community with a lot of numbers of yesterday of bulletin board writing.</source>
-      <target>昨日の掲示板書き込み数が多かったコミュニティのランキングです。</target>
+        <source>It is a ranking of the %community% with a lot of numbers of yesterday of bulletin board writing.</source>
+        <target>昨日の掲示板書き込み数が多かった%community%のランキングです。</target>
       </trans-unit>
 
       <trans-unit id="11">
-      <source>No%s</source>
-      <target>第%s位</target>
+        <source>No%0%</source>
+        <target>第%0%位</target>
       </trans-unit>
       <trans-unit id="12">
-      <source>Category</source>
-      <target>カテゴリ</target>
+        <source>Category</source>
+        <target>カテゴリ</target>
       </trans-unit>
       <trans-unit id="13">
-      <source>Manager</source>
-      <target>管理者</target>
+        <source>Manager</source>
+        <target>管理者</target>
       </trans-unit>
       <trans-unit id="14">
-      <source>Description</source>
-      <target>紹介文</target>
+        <source>Description</source>
+        <target>紹介文</target>
       </trans-unit>
 
       <trans-unit id="15">
-      <source> :%saccess</source>
-      <target>さん :%sアクセス</target>
+        <source>%0% :%1% access</source>
+        <target>%0%さん :%1%アクセス</target>
       </trans-unit>
-
       <trans-unit id="16">
-      <source> :%smember</source>
-      <target>さん :%s人</target>
+        <source>%0% :%1% member</source>
+        <target>%0%さん :%1%人</target>
       </trans-unit>
-
       <trans-unit id="17">
-      <source>:%smember</source>
-      <target>:%s人</target>
+        <source>:%0% member</source>
+        <target>:%0%人</target>
       </trans-unit>
-
-      <trans-unit id="17">
-      <source>:%swriting</source>
-      <target>:書き込み%s件</target>
-      </trans-unit>
-
       <trans-unit id="18">
-      <source>all member is 0 access</source>
-      <target>全てのメンバーは0アクセスです</target>
+        <source>:%0% writing</source>
+        <target>:書き込み%0%件</target>
       </trans-unit>
 
       <trans-unit id="19">
-      <source>There is no member who has a MyFriend</source>
-      <target>マイフレンドがいるメンバーがいません</target>
+        <source>all member is 0 access</source>
+        <target>全てのメンバーは0アクセスです</target>
       </trans-unit>
 
       <trans-unit id="20">
-      <source>No community</source>
-      <target>コミュニティがありません</target>
+        <source>There is no member who has a %friend%</source>
+        <target>%friend%がいるメンバーがいません</target>
       </trans-unit>
-
       <trans-unit id="21">
-      <source>Not written</source>
-      <target>書き込まれていません</target>
+        <source>No %community%</source>
+        <target>%community%がありません</target>
       </trans-unit>
-
       <trans-unit id="22">
-      <source>Ranking</source>
-      <target>ランキング</target>
+        <source>Not written</source>
+        <target>書き込まれていません</target>
       </trans-unit>
 
       <trans-unit id="23">
-      <source>The No1 of the number of access member is %s</source>
-      <target>アクセス数No1メンバーは%sさんです</target>
+        <source>Ranking</source>
+        <target>ランキング</target>
       </trans-unit>
 
       <trans-unit id="24">
-      <source>The No1 of the number of Friends member is %s</source>
-      <target>マイフレンド数No1メンバーは%sさんです</target>
+        <source>The No1 of the number of access member is %0%</source>
+        <target>アクセス数No1メンバーは%0%さんです</target>
       </trans-unit>
-
       <trans-unit id="25">
-      <source>The No1 of the number of community member is '%s'</source>
-      <target>参加人数No1コミュニティは『%s』です</target>
+        <source>The No1 of the number of %friend% member is %0%</source>
+        <target>%friend%数No1メンバーは%0%さんです</target>
       </trans-unit>
-
       <trans-unit id="26">
-      <source>No1 community is '%s' at each upsurge</source>
-      <target>盛り上がり度:No1コミュニティは『%s』です</target>
+        <source>The No1 of the number of %community% member is '%0%'</source>
+        <target>参加人数No1%community%は『%0%』です</target>
+      </trans-unit>
+      <trans-unit id="27">
+        <source>No1 %community% is '%0%' at each upsurge</source>
+        <target>盛り上がり度:No1%community%は『%0%』です</target>
       </trans-unit>
     </body>
   </file>

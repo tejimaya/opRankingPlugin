@@ -1,14 +1,14 @@
 <?php
-op_mobile_page_title(__('Ranking'), __('No1 community at each upsurge'));
+op_mobile_page_title(__('Ranking'), __('No1 %community% at each upsurge'));
 
-echo '<center>' . __('It is a ranking of the community with a lot of numbers of yesterday of bulletin board writing.') . '</center>';
+echo '<center>'.__('It is a ranking of the %community% with a lot of numbers of yesterday of bulletin board writing.').'</center>';
 
 $list = array();
 for ($i = 0; $i < $ranking['number']; $i++)
 {
   $community = $ranking['model'][$i];
-  $list[] = sprintf(__('No%s'), $ranking['rank'][$i]) . '<br />'
-          . link_to($community->getName(), 'community/home/id/' . $community->getId()) . ' ' . sprintf(__(':%swriting'), $ranking['count'][$i]);
+  $list[] = __('No%0%', array('%0%' => $ranking['rank'][$i])).'<br>'
+          . link_to($community->getName(), 'community/home?id='.$community->getId()).' '.__(':%0% writing', array('%0%' => $ranking['count'][$i]));
 }
 
 $options = array(
