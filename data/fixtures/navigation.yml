@@ -1,7 +1,7 @@
 Navigation:
   secure_global_navigation_ranking:
     type: "secure_global"
-    uri: "ranking/access"
+    uri: "@ranking"
     sort_order: 23
     Translation:
       ja_JP:
@@ -11,10 +11,10 @@ Navigation:
 
   mobile_home_side_navigation_ranking_access:
     type: "mobile_home_side"
-    uri: "ranking/access"
+    uri: "@ranking"
     sort_order: 23
     Translation:
       ja_JP:
-        caption: "ﾗﾝｷﾝｸﾞ"
+        caption: "[i:191]ﾗﾝｷﾝｸﾞ"
       en:
         caption: "Rankingﾞ"
