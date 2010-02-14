@@ -1,7 +1,6 @@
+<?php op_mobile_page_title(__('Ranking'), __('Participation number No1 %community%')); ?>
+<?php if ($ranking['number']): ?>
 <?php
-
-op_mobile_page_title(__('Ranking'), __('Participation number No1 %community%'));
-
 echo '<center>'.__('It is a ranking of a lot of %community% of the participant that are.', array('%community%' => $op_term['community']->pluralize())).'</center>';
 
 $list = array();
@@ -17,4 +16,7 @@ $options = array(
 );
 
 op_include_list('rankingList', $list, $options);
-op_include_parts('rankingLink', 'RankingLink');
+?>
+<?php else: ?>
+<?php echo '<center>' . __('No %community%') . '</center>'; ?>
+<?php endif; ?>

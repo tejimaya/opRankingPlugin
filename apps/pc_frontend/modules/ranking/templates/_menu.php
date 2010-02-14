@@ -1,3 +1,4 @@
+<?php slot('op_sidemenu'); ?>
 <div class="parts rankingSideNav">
 
 <?php if (class_exists('Ashiato')): ?>
@@ -8,11 +9,13 @@
 </div>
 <?php endif; ?>
 
+<?php if ($op_config['enable_friend_link']): ?>
 <div class="item">
 <div class="partsHeading"><h3><?php echo __('Member of number No1 of %friend%', array('%friend%' => $op_term['friend']->pluralize())) ?></h3></div>
 <p><?php echo __('It is a ranking of the member with a lot of numbers of registered %friend%.', array('%friend%' => $op_term['friend']->pluralize())) ?></p>
 <p class="link"><?php echo link_to(__('Member of number No1 of %friend%', array('%friend%' => $op_term['friend']->pluralize())), 'ranking/friend') ?></p>
 </div>
+<?php endif; ?>
 
 <div class="item">
 <div class="partsHeading"><h3><?php echo __('Participation number No1 %community%') ?></h3></div>
@@ -29,3 +32,4 @@
 <?php endif; ?>
 
 </div>
+<?php end_slot(); ?>

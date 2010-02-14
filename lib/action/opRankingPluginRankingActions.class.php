@@ -4,59 +4,49 @@
  * opRankingPluginRanking actions.
  *
  * @package    OpenPNE
- * @subpackage ranking
+ * @subpackage action
  * @author     Your name here
  * @version    SVN: $Id: actions.class.php 9301 2008-05-27 01:08:46Z dwhittle $
  */
 class opRankingPluginRankingActions extends sfActions
 {
-  /**
-  * Executes access action
-  *
-  * @param sfRequest $request A request object
-  */
-  public function executeAccess($request)
-  {
-    $this->forward404Unless(class_exists('Ashiato'));
-    $this->member_list = opRankingPlugin::getAccessRanking(10, 0);
-    if ($this->member_list['number']) return sfView::SUCCESS;
-    return sfView::ERROR;
-  }
-
  /**
-  * executes myfriend action
+  * Executes show action
   *
-  * @param sfrequest $request a request object
+  * @param sfWebRequest $request A request object
   */
-  public function executeFriend($request)
+  public function executeShow(sfWebRequest $request)
   {
-    $this->member_list = opRankingPlugin::getFriendRanking(10, 0);
-    if ($this->member_list['number']) return sfView::SUCCESS;
-    return sfView::ERROR;
-  }
+    if (!$request->hasParameter('type'))
+    {
+      if (class_exists('Ashiato'))
+      {
+        $this->type = 'access';
+      }
+      elseif (opConfig::get('enable_friend_link', true))
+      {
+        $this->type = 'friend';
+      }
+      else
+      {
+        $this->type = 'community';
+      }
+    }
+    else
+    {
+      $this->type = $request->getParameter('type');
+    }
 
- /**
-  * executes community action
-  *
-  * @param sfrequest $request a request object
-  */
-  public function executeCommunity($request)
-  {
-    $this->ranking = opRankingPlugin::getCommunityRanking(10, 0);
-    if ($this->ranking['number']) return sfView::SUCCESS;
-    return sfView::ERROR;
-  }
-
- /**
-  * executes topic action
-  *
-  * @param sfrequest $request a request object
-  */
-  public function executeTopic($request)
-  {
-    $this->forward404Unless(class_exists('CommunityTopicComment'));
-    $this->ranking = opRankingPlugin::getTopicRanking(10, 0);
-    if ($this->ranking['number']) return sfView::SUCCESS;
-    return sfView::ERROR;
+    switch ($this->type)
+    {
+      case "access" :
+        $this->forward404Unless(class_exists('Ashiato'));
+        break;
+      case "friend" :
+        $this->forward404Unless(opConfig::get('enable_friend_link', true));
+        break;
+      case "topic" :
+        $this->forward404Unless(class_exists('CommunityTopicComment'));
+    }
   }
 }

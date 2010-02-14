@@ -1,14 +1,6 @@
 <?php
 
 /**
- * This file is part of the OpenPNE package.
- * (c) OpenPNE Project (http://www.openpne.jp/)
- *
- * For the full copyright and license information, please view the LICENSE
- * file and the NOTICE file that were distributed with this source code.
- */
-
-/**
  * opRankingPluginFrontendRouteCollection
  *
  * @package    opRankingPlugin
@@ -22,21 +14,25 @@ class opRankingPluginFrontendRouteCollection extends sfRouteCollection
     parent::__construct($options);
 
     $this->routes = array(
+      'ranking' => new sfRoute(
+        '/ranking',
+        array('module' => 'ranking', 'action' => 'show')
+      ),
       'ranking_access' => new sfRoute(
         '/ranking/access',
-        array('module' => 'ranking', 'action' => 'access')
+        array('module' => 'ranking', 'action' => 'show', 'type' => 'access')
       ),
       'ranking_friend' => new sfRoute(
         '/ranking/friend',
-        array('module' => 'ranking', 'action' => 'friend')
+        array('module' => 'ranking', 'action' => 'show', 'type' => 'friend')
       ),
       'ranking_community' => new sfRoute(
         '/ranking/community',
-        array('module' => 'ranking', 'action' => 'community')
+        array('module' => 'ranking', 'action' => 'show', 'type' => 'community')
       ),
       'ranking_topic' => new sfRoute(
         '/ranking/topic',
-        array('module' => 'ranking', 'action' => 'topic')
+        array('module' => 'ranking', 'action' => 'show', 'type' => 'topic')
       ),
       'ranking_default' => new sfRoute(
         '/ranking/*',

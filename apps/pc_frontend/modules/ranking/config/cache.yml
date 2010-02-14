@@ -1,0 +1,18 @@
+_menu:
+  enabled: true
+
+_access:
+  enabled: true
+  lifetime: 3600
+
+_friend:
+  enabled: true
+  lifetime: 3600
+
+_community:
+  enabled: true
+  lifetime: 3600
+
+_topic:
+  enabled: true
+  lifetime: 3600

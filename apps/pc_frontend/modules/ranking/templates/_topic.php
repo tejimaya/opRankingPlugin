@@ -1,3 +1,4 @@
+<?php if ($ranking['number']): ?>
 <?php
 $list = array();
 for ($i = 0; $i < $ranking['number']; $i++)
@@ -11,6 +12,7 @@ for ($i = 0; $i < $ranking['number']; $i++)
 }
 
 $options = array(
+  'id'             => 'rankingResultList',
   'title'          => __("No1 %community% is '%0%' at each upsurge", array('%community%' => $op_term['community'], '%0%' => $ranking['model'][0]->getName())),
   'link_to_detail' => 'community/home?id=%d',
   'model'          => $ranking['model'],
@@ -18,7 +20,10 @@ $options = array(
   'rank'           => $ranking['rank'],
 );
 
-slot('op_sidemenu');
-include_parts('rankingLink', 'RankingLink');
-end_slot();
-include_parts('rankingResultList', 'RankingResultList', $options);
+include_partial('global/partsRankingResultList', array('options' => $options));
+?>
+<?php else: ?>
+<?php op_include_box('community_list', __('Not written'), array(
+  'title' => __('No1 %community% at each upsurge'), 
+)); ?>
+<?php endif; ?>
