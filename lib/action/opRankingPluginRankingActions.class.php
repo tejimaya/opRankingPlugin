@@ -17,9 +17,12 @@ class opRankingPluginRankingActions extends sfActions
   */
   public function executeShow(sfWebRequest $request)
   {
+    $this->isAshiatoUsable = opPlugin::getInstance('opAshiatoPlugin')->getIsActive();
+    $this->isTopicUsable = opPlugin::getInstance('opCommunityTopicPlugin')->getIsActive();
+
     if (!$request->hasParameter('type'))
     {
-      if (class_exists('Ashiato'))
+      if ($this->isAshiatoUsable)
       {
         $this->type = 'access';
       }
@@ -40,13 +43,13 @@ class opRankingPluginRankingActions extends sfActions
     switch ($this->type)
     {
       case "access" :
-        $this->forward404Unless(class_exists('Ashiato'));
+        $this->forward404Unless($this->isAshiatoUsable);
         break;
       case "friend" :
         $this->forward404Unless(opConfig::get('enable_friend_link', true));
         break;
       case "topic" :
-        $this->forward404Unless(class_exists('CommunityTopicComment'));
+        $this->forward404Unless($this->isTopicUsable);
     }
   }
 }
