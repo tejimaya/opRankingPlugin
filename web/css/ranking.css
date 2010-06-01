@@ -4,15 +4,14 @@
  * rankingSideNav
  *----------------------------------------------------------------------------*/
 .rankingSideNav {
-  width: 150px;
   margin: 0 auto;
-  border: 8px solid #CCCCCC;
 }
 .rankingSideNav .partsHeading {
   padding: 2px 4px;
   border-bottom: 1px solid #CCCCCC;
   background-image: none;
   text-align: center;
+  font-size: 80%;
 }
 .rankingSideNav p {
   margin: 3px;
