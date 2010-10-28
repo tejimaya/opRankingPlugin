@@ -1,0 +1,67 @@
+Community:
+  community_1:
+    name: "<&\"'>Community.name1 ESCAPING HTML TEST DATA"
+  community_2:
+    name: "<&\"'>Community.name2 ESCAPING HTML TEST DATA"
+
+CommunityConfig:
+  first_community_config_description:
+    Community: community_1
+    name: "description"
+    value: "<&\"'>CommunityConfig.description ESCAPING HTML TEST DATA"
+  second_community_config_description:
+    Community: community_2
+    name: "description"
+    value: "<&\"'>CommunityConfig.description ESCAPING HTML TEST DATA"
+
+CommunityCategory:
+  community_category:
+    name: "コミュニティカテゴリ"
+    is_allow_member_community: 1
+  community_category_1:
+    name: "CategoryA"
+    tree_key: 1
+    is_allow_member_community: 1
+    sort_order: 2
+  community_category_2:
+    name: "CategoryB"
+    tree_key: 1
+    is_allow_member_community: 1
+    sort_order: 1
+
+CommunityMember:
+  community_1_first_member:
+    Community: community_1
+    Member: first_member
+  community_2_first_member:
+    Community: community_2
+    Member: first_member
+
+CommunityMemberPosition:
+  community_1_admin:
+    Community: community_1
+    Member: first_member
+    CommunityMember: community_1_first_member
+    name: "admin"
+  community_2_admin:
+    Community: community_2
+    Member: first_member
+    CommunityMember: community_2_first_member
+    name: "admin"
+
+CommunityTopic:
+  community_topic_a_2:
+    name: "_aトピ主"
+    body: "こんにちは"
+    Community: community_1
+    Member: first_member
+    updated_at: <?php echo date("\"Y-m-d H:i:s\"\n", strtotime('-1 day')) ?>
+    created_at: <?php echo date("\"Y-m-d H:i:s\"\n", strtotime('-1 day')) ?>
+
+CommunityTopicComment:
+  community_topic_comment_a_2:
+    body: "こんにちは"
+    CommunityTopic: community_topic_a_2
+    Member: first_member
+    updated_at: <?php echo date("\"Y-m-d H:i:s\"\n", strtotime('-1 day')) ?>
+    created_at: <?php echo date("\"Y-m-d H:i:s\"\n", strtotime('-1 day')) ?>

@@ -1,0 +1,7 @@
+Ashiato:
+  ashiato_first_to_second:
+    Member: first_member
+    Member_2: second_member
+    r_date: <?php echo date("\"Y-m-d 00:00:00\"\n", strtotime('-1 day')) ?>
+    updated_at: <?php echo date("\"Y-m-d H:i:s\"\n", strtotime('-1 day')) ?>
+    created_at: <?php echo date("\"Y-m-d H:i:s\"\n", strtotime('-1 day')) ?>

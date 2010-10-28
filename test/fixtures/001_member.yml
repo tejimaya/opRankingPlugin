@@ -1,0 +1,72 @@
+Member:
+  first_member:
+    id: 1
+    name: "<&\"'>Member.name ESCAPING HTML TEST DATA"
+    is_active: 1
+
+  second_member:
+    id: 2
+    name: "<&\"'>Member.name ESCAPING HTML TEST DATA"
+    is_active: 1
+
+  third_member:
+    id: 3
+    name: "<&\"'>Member.name ESCAPING HTML TEST DATA"
+    is_active: 1
+
+MemberConfig:
+  first_member_member_config_pc_address:
+    name: "pc_address"
+    value: "sns@example.com"
+    Member: first_member
+
+  first_member_member_config_password:
+    name: "password"
+    value: <?php echo md5('password') . "\n"; ?>
+    Member: first_member
+
+Profile:
+  profile_self_intro:
+    name: "op_preset_self_introduction"
+    is_required: 0
+    form_type: "textarea"
+    value_type: "string"
+    is_disp_regist: 1
+    is_disp_config: 1
+    is_disp_search: 1
+    is_edit_public_flag: 1
+    default_public_flag: 1
+    sort_order: 130
+
+MemberProfile:
+  first_member_profile_self_intro:
+    value: "<&\"'>MemberProfile.self_intro ESCAPING HTML TEST DATA"
+    public_flag: 3
+    Member: first_member
+    Profile: profile_self_intro
+    children: []
+
+  second_member_profile_self_intro:
+    value: "<&\"'>MemberProfile.self_intro ESCAPING HTML TEST DATA"
+    public_flag: 3
+    Member: second_member
+    Profile: profile_self_intro
+    children: []
+
+  third_member_profile_self_intro:
+    value: "<&\"'>MemberProfile.self_intro ESCAPING HTML TEST DATA"
+    public_flag: 3
+    Member: third_member
+    Profile: profile_self_intro
+    children: []
+
+MemberRelationship:
+  first_member_second_member:
+    Member: first_member
+    MemberRelatedByMemberIdFrom: second_member
+    is_friend: 1
+  second_member_first_member:
+    Member: second_member
+    MemberRelatedByMemberIdFrom: first_member
+    is_friend: 1
+
