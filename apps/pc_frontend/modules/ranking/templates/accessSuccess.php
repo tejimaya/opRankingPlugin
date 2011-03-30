@@ -4,9 +4,11 @@ for ($i = 0; $i < $member_list['number']; $i++)
 {
   $member = $member_list['model'][$i];
   $list[$i][sprintf(__('No%s'), $member_list['rank'][$i])] = $member->getName() . sprintf(__(' :%saccess'), $member_list['count'][$i]);
-  if ($member->getProfile('self_intro'))
+
+  $self_intro = $member->getProfile('self_intro');
+  if ($self_intro && $self_intro->isViewable())
   {
-    $list[$i][$member->getProfile('self_intro')->getCaption()] = nl2br($member->getProfile('self_intro'));
+    $list[$i][$self_intro->getCaption()] = nl2br($self_intro);
   }
 }
 
