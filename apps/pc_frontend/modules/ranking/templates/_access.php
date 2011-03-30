@@ -7,9 +7,10 @@ for ($i = 0; $i < $memberList['number']; $i++)
   $list[$i][__('No%0%', array('%0%' => $memberList['rank'][$i]))] =
     __('%0% :%1% access', array('%0%' => link_to($member->getName(), 'member/profile?id='.$member->getId()), '%1%' => $memberList['count'][$i]));
   $selfintoroCaption = __('Self Introduction');
-  if ($member->getProfile('op_preset_self_introduction'))
+  $selfintoro = $member->getProfile('op_preset_self_introduction');
+  if ($selfintoro && $selfintoro->isAllowed($sf_user->getMember()->getRawValue(), 'view'))
   {
-    $list[$i][$selfintoroCaption] = op_truncate($member->getProfile('op_preset_self_introduction'), 36, '', 3);
+    $list[$i][$selfintoroCaption] = op_truncate($selfintoro, 36, '', 3);
   }
 }
 
