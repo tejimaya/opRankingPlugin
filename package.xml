@@ -13,11 +13,11 @@
   <email />
   <active>yes</active>
  </lead>
- <date>2010-06-01</date>
- <time>14:32:17</time>
+ <date>2011-04-19</date>
+ <time>20:51:53</time>
  <version>
-  <release>1.0.0</release>
-  <api>1.0.0</api>
+  <release>1.0.0.1</release>
+  <api>1.0.0.1</api>
  </version>
  <stability>
   <release>beta</release>
@@ -25,7 +25,7 @@
  </stability>
  <license>apache</license>
  <notes>
-added cache table/routing roule, fixed bugs
+changed getting member&apos;s self introduction to consider profile.public_flag
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
@@ -50,12 +50,13 @@ added cache table/routing roule, fixed bugs
    <file baseinstalldir="/" md5sum="9cbbf2a71ebac31c5e9df7c44c2e0dec" name="apps/pc_frontend/modules/ranking/config/security.yml" role="data" />
    <file baseinstalldir="/" md5sum="4f9e6d1cfbdfeb8c5d9d3d2ce7b3dba3" name="apps/pc_frontend/modules/ranking/config/view.yml" role="data" />
    <file baseinstalldir="/" md5sum="79cb6d887fe36f32a6bf4c5112d2cf58" name="apps/pc_frontend/modules/ranking/templates/showSuccess.php" role="data" />
-   <file baseinstalldir="/" md5sum="c39d10c96799a5519bf3bfaa20773bbc" name="apps/pc_frontend/modules/ranking/templates/_access.php" role="data" />
+   <file baseinstalldir="/" md5sum="299ac1038af55a0214eb159ea2515014" name="apps/pc_frontend/modules/ranking/templates/_access.php" role="data" />
    <file baseinstalldir="/" md5sum="18231cf99834d0a3f651de123959fb7d" name="apps/pc_frontend/modules/ranking/templates/_community.php" role="data" />
-   <file baseinstalldir="/" md5sum="0366981bd8b28a668049e89dc025063a" name="apps/pc_frontend/modules/ranking/templates/_friend.php" role="data" />
+   <file baseinstalldir="/" md5sum="c4816a50f46389c7c26c3d4514ef2836" name="apps/pc_frontend/modules/ranking/templates/_friend.php" role="data" />
    <file baseinstalldir="/" md5sum="f26f1d9fea0a9022fc3840fa1fd2872e" name="apps/pc_frontend/modules/ranking/templates/_menu.php" role="data" />
    <file baseinstalldir="/" md5sum="ee08f86eb33c451b8c734d754b595575" name="apps/pc_frontend/modules/ranking/templates/_topic.php" role="data" />
    <file baseinstalldir="/" md5sum="44decc0ab305204b5314316883114a76" name="apps/pc_frontend/templates/_partsRankingResultList.php" role="data" />
+   <file baseinstalldir="/" md5sum="766525e8ac1cf5121e8b13e9c01cc530" name="config/app.yml" role="data" />
    <file baseinstalldir="/" md5sum="bf7f3fc7d43575fb5695cbeb2e69bf7c" name="data/fixtures/navigation.yml" role="data" />
    <file baseinstalldir="/" md5sum="6998e2a811b9fa3089263b4bcfbd6c6d" name="lib/opRankingPlugin.php" role="data" />
    <file baseinstalldir="/" md5sum="c403d49f71a9588b906b7ad856021931" name="lib/action/opRankingPluginRankingActions.class.php" role="data" />
@@ -104,6 +105,21 @@ This plugin is now compatible with Doctrine
    <license>apache</license>
    <notes>
 added cache table/routing roule, fixed bugs
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.0.1</release>
+    <api>1.0.0.1</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2011-04-19</date>
+   <license>apache</license>
+   <notes>
+changed getting member&apos;s self introduction to consider profile.public_flag
    </notes>
   </release>
  </changelog>
