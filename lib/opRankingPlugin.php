@@ -122,8 +122,12 @@ class opRankingPlugin
       {
         $rank++;
       }
+
+      $community = $communityTable->find($communityMember['community_id']);
+      if (!$community || !$community->getId()) continue;
+
       $list['count'][$i] = $cnt = $communityMember['COUNT'];
-      $list['model'][$i] = $communityTable->find($communityMember['community_id']);
+      $list['model'][$i] = $community;
       $list['rank'][$i] = $rank;
       $adminCommunityMember = $communityMemberTable->getCommunityAdmin($communityMember['community_id']);
       $list['admin'][$i] = $adminCommunityMember->getMember();
@@ -174,8 +178,12 @@ class opRankingPlugin
       {
         $rank++;
       }
+
+      $community = $communityTable->find($communityTopicComment['community_id']);
+      if (!$community || !$community->getId()) continue;
+
       $list['count'][$i] = $cnt = $communityTopicComment['COUNT'];
-      $list['model'][$i] = $communityTable->find($communityTopicComment['community_id']);
+      $list['model'][$i] = $community;
       $list['rank'][$i] = $rank;
       $adminCommunityMember = $communityMemberTable->getCommunityAdmin($communityTopicComment['community_id']);
       $list['admin'][$i] = $adminCommunityMember->getMember();
