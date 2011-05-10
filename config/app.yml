@@ -1,0 +1,4 @@
+all:
+  # ランキングにメンバーの自己紹介を表示するかどうか（PCのみ）
+  # true に設定した場合、キャッシュにより一時的に権限のない自己紹介が表示されてしまう可能性があります
+  ranking_display_self_introduction: false

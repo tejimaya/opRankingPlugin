@@ -6,10 +6,19 @@ for ($i = 0; $i < $memberList['number']; $i++)
   $member = $memberList['model'][$i];
   $list[$i][__('No%0%', array('%0%' => $memberList['rank'][$i]))] =
     __('%0% :%1% member', array('%0%' => link_to($member->getName(), '@obj_member_profile?id='.$member->getId()), '%1%' => $memberList['count'][$i]));
-  $selfintoroCaption = __('Self Introduction');
-  if ($member->getProfile('op_preset_self_introduction'))
+
+  if (sfConfig::get('app_ranking_display_self_introduction', false))
   {
-    $list[$i][$selfintoroCaption] = op_truncate($member->getProfile('op_preset_self_introduction'), 36, '', 3);
+    $selfintoroCaption = __('Self Introduction');
+    $selfintoro = $member->getProfile('op_preset_self_introduction');
+    if ($selfintoro)
+    {
+      $acl = $selfintoro->getTable()->getAcl($selfintoro->getRawValue());
+      if ($acl->isAllowed('everyone', $selfintoro->getRawValue(), 'view'))
+      {
+        $list[$i][$selfintoroCaption] = op_truncate($selfintoro, 36, '', 3);
+      }
+    }
   }
 }
 
