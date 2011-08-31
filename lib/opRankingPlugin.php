@@ -35,12 +35,17 @@ class opRankingPlugin
     $memberTable = Doctrine::getTable('Member');
     foreach ($ashiatos as $ashiato)
     {
+      $member = $memberTable->find($ashiato['member_id_to']);
+      if (!$member || !$member->getId())
+      {
+        continue;
+      }
       if ($i && ($cnt != $ashiato['COUNT']))
       {
         $rank++;
       }
       $list['count'][$i] = $cnt = $ashiato['COUNT'];
-      $list['model'][$i] = $memberTable->find($ashiato['member_id_to']);
+      $list['model'][$i] = $member;
       $list['rank'][$i] = $rank;
       $i++;
     }
