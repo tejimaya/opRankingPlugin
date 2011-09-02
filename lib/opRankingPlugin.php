@@ -36,7 +36,7 @@ class opRankingPlugin
     foreach ($ashiatos as $ashiato)
     {
       $member = $memberTable->find($ashiato['member_id_to']);
-      if (!$member || !$member->getId())
+      if (!$member)
       {
         continue;
       }
