@@ -13,11 +13,17 @@
   <email />
   <active>yes</active>
  </lead>
- <date>2011-04-19</date>
- <time>20:51:53</time>
+ <lead>
+  <name>Yuya Watanabe</name>
+  <user>watanabe</user>
+  <email />
+  <active>yes</active>
+ </lead>
+ <date>2011-09-21</date>
+ <time>18:17:18</time>
  <version>
-  <release>1.0.0.1</release>
-  <api>1.0.0.1</api>
+  <release>1.0.1</release>
+  <api>1.0.1</api>
  </version>
  <stability>
   <release>beta</release>
@@ -25,7 +31,7 @@
  </stability>
  <license>apache</license>
  <notes>
-changed getting member&apos;s self introduction to consider profile.public_flag
+fix bugs
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
@@ -58,10 +64,19 @@ changed getting member&apos;s self introduction to consider profile.public_flag
    <file baseinstalldir="/" md5sum="44decc0ab305204b5314316883114a76" name="apps/pc_frontend/templates/_partsRankingResultList.php" role="data" />
    <file baseinstalldir="/" md5sum="766525e8ac1cf5121e8b13e9c01cc530" name="config/app.yml" role="data" />
    <file baseinstalldir="/" md5sum="bf7f3fc7d43575fb5695cbeb2e69bf7c" name="data/fixtures/navigation.yml" role="data" />
-   <file baseinstalldir="/" md5sum="6998e2a811b9fa3089263b4bcfbd6c6d" name="lib/opRankingPlugin.php" role="data" />
+   <file baseinstalldir="/" md5sum="a9024e8c3541d207b58ccf67a5d92d05" name="lib/opRankingPlugin.php" role="data" />
    <file baseinstalldir="/" md5sum="c403d49f71a9588b906b7ad856021931" name="lib/action/opRankingPluginRankingActions.class.php" role="data" />
    <file baseinstalldir="/" md5sum="d22379b1c44ca1dcdca0fdc8f54c4c22" name="lib/action/opRankingPluginRankingComponents.class.php" role="data" />
    <file baseinstalldir="/" md5sum="f3d892c29dd62c0dc321474533b4f6d0" name="lib/routing/opRankingPluginFrontendRouteCollection.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="8a585d7165b066c62d5d1c69d7877362" name="test/bootstrap/database.php" role="data" />
+   <file baseinstalldir="/" md5sum="652a0d72910be1a5786698aaf5b9b508" name="test/bootstrap/functional.php" role="data" />
+   <file baseinstalldir="/" md5sum="b6e69bd4c5958def80bc622b1e8d15b2" name="test/bootstrap/unit.php" role="data" />
+   <file baseinstalldir="/" md5sum="d156a66f3c6b107efe7c26692562fbc1" name="test/fixtures/001_member.yml" role="data" />
+   <file baseinstalldir="/" md5sum="2aee34e5460983ac340cde8b464d4bb0" name="test/fixtures/002_community.yml" role="data" />
+   <file baseinstalldir="/" md5sum="1f1ae25cee91e4b897e836932578e1f3" name="test/fixtures/003_ashiato.yml" role="data" />
+   <file baseinstalldir="/" md5sum="eb9d389b56456483fd8e1e2cdd3b02d9" name="test/fixtures/004_sns_config.yml" role="data" />
+   <file baseinstalldir="/" md5sum="56d02d1e5885c12322d22f005369eff3" name="test/functional/mobile_frontend/rankingActionsTest.php" role="data" />
+   <file baseinstalldir="/" md5sum="59fd22d7f2d809b3692946ea1fc6e049" name="test/functional/pc_frontend/rankingActionsTest.php" role="data" />
    <file baseinstalldir="/" md5sum="c0165e5bbf65d7df8630c417ab65e11b" name="web/css/ranking.css" role="data" />
   </dir>
  </contents>
@@ -120,6 +135,21 @@ added cache table/routing roule, fixed bugs
    <license>apache</license>
    <notes>
 changed getting member&apos;s self introduction to consider profile.public_flag
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.1</release>
+    <api>1.0.1</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2011-09-21</date>
+   <license>apache</license>
+   <notes>
+fix bugs
    </notes>
   </release>
  </changelog>
